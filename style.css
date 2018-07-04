@@ -1,0 +1,99 @@
+ *{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+body ,main{
+    height: 100%;
+    background: linear-gradient(to right top, rgba(38,50,105,0.78), rgba(255,152,0,0.45)), url(http://pic.4j4j.cn/upload/pic/20121023/e2ab92cb7b.jpg) ; 
+}
+ header{
+    position: absolute;
+    top: 10px;
+    width: 100%;
+}
+header .login-icon{
+    float: right;
+    margin-right: 20px;
+}
+.flip-modal{
+     display: none; 
+}
+.modal{
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+    background: #fffff3;
+}
+main .modal .close{
+    font-size: 15px;
+    position: absolute;
+    top: 5px;
+    left: 370px;
+}
+main .modal .title{
+    text-align: center;
+}
+main .modal-login .title .login{
+    border-bottom: 3px solid;
+    font-size: 22px;
+}
+main .modal-register .title .register{
+    border-bottom: 3px solid;
+    font-size: 22px;
+}
+main .modal .title a{
+    font-size: 21px;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin: 5px 20px;
+} 
+main .modal .content {
+    padding: 0 40px;
+}
+.errormsg{
+    font-size: 15px;
+    color: #ff9800;
+}
+main .modal .content .input-field{
+    height: 35px ;
+    width: 250px;
+    margin: 20px;
+    position: relative;
+}
+main .modal .content .input-field b{
+    font-size:18px;
+    position: absolute;
+    top: 3px;
+    left: 5px; 
+}
+.modal .content input[type=text],
+.modal .content input[type=password]{
+    width: 100%;
+    padding: 10px 10px 10px 23px;
+    outline: none;
+}
+.modal .content input[type=submit]{
+    padding: 6px 10px;
+    border: none;
+    background: #fff;
+    box-shadow: 0px 0px  2px rgba(0, 0, 0, 0.4);
+    outline: none;
+}
+.flip-modal.login .modal-register,
+.flip-modal.register .modal-login{
+    transform: translate(-50%,-50%)rotateY(180deg);
+    backface-visibility: hidden;
+    transition: all 1s;
+}
+.flip-modal.register .modal-register,
+.flip-modal.login .modal-login{
+    transform: translate(-50%,-50%)rotateY(0deg);
+    backface-visibility: hidden;
+    transition: all 1s;
+}
